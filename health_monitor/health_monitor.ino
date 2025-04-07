@@ -106,8 +106,8 @@ void loop() {
 
   // Construct payload
   String payload = "{";
-  payload += "\"temperature\":" + String(temp) + ",";
-  payload += "\"humidity\":" + String(hum) + ",";
+  // payload += "\"temperature\":" + String(temp) + ",";
+  // payload += "\"humidity\":" + String(hum) + ",";
   payload += "\"posture\":\"" + posture + "\",";
   payload += "\"spo2\":" + String(spo2) + ",";
   payload += "\"pressure\":" + pressureJson;
