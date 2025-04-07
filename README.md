@@ -18,6 +18,8 @@ protocol mqtt
 
 listener 9001
 protocol websockets
+
+allow_anonymous true
 ```
 
 - In the project folder, run:
