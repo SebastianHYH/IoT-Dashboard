@@ -6,9 +6,9 @@
 #include <DHT.h>
 
 // --- WiFi & MQTT Setup ---
-const char* ssid = "YOUR_WIFI_SSID";
-const char* password = "YOUR_WIFI_PASSWORD";
-const char* mqtt_server = "192.168.X.X"; // your PC's IP
+const char* ssid = "Seb's iPhone";
+const char* password = "sebastian2005";
+const char* mqtt_server = "172.20.10.3"; // your PC's IP
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -106,8 +106,8 @@ void loop() {
 
   // Construct payload
   String payload = "{";
-  // payload += "\"temperature\":" + String(temp) + ",";
-  // payload += "\"humidity\":" + String(hum) + ",";
+  payload += "\"temperature\":" + String(temp) + ",";
+  payload += "\"humidity\":" + String(hum) + ",";
   payload += "\"posture\":\"" + posture + "\",";
   payload += "\"spo2\":" + String(spo2) + ",";
   payload += "\"pressure\":" + pressureJson;

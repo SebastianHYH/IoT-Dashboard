@@ -12,6 +12,12 @@ client.on('message', (topic, message) => {
   const value = message.toString();
 
   switch (topic) {
+    case 'sensor/temperature':
+      document.getElementById('temperature').textContent = `Temperature: ${value} °C`;
+      break;
+    case 'sensor/humidity':
+      document.getElementById('humidity').textContent = `Humidity: ${value} %`;
+      break;
     case 'sensor/pressure':
       document.getElementById('pressure').textContent = `Pressure: ${value} hPa`;
       break;
